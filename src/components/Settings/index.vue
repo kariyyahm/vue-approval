@@ -1,9 +1,6 @@
-<!-- 基础设置 -->
+<!-- 高级设置 -->
 <template>
-  <div>
-    我是基础设置
-    <a-button type="danger">test</a-button>
-  </div>
+  <div></div>
 </template>
 
 <script>
