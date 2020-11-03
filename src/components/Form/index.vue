@@ -1,6 +1,6 @@
 <!-- 表单设置 -->
 <template>
-  <div>
+  <div class="form">
     我是表单设置
   </div>
 </template>
@@ -20,6 +20,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
+.form {
+  //width: 100vw;
+}
 </style>

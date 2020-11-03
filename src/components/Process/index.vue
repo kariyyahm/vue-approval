@@ -1,6 +1,6 @@
 <!-- 流程设置 -->
 <template>
-  <div>
+  <div class="process">
     我是流程设置
   </div>
 </template>
@@ -20,6 +20,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
+.process {
+  //width: 100vw;
+}
 </style>

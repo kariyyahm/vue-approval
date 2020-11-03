@@ -1,6 +1,8 @@
 <!-- 高级设置 -->
 <template>
-  <div></div>
+  <div class="settings">
+    我是高级设置
+  </div>
 </template>
 
 <script>
@@ -17,6 +19,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
+.settings {
+  //width: 100vw;
+}
 </style>
