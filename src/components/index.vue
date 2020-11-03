@@ -1,11 +1,12 @@
 <!-- index.vue -->
 <template>
   <div class="index">
+    <div class="index-background"></div>
     <div class="approval-logo">
-      <a-button shape="circle" style="margin-right: 10px;">
+      <a-button shape="circle" style="margin-right: 10px; z-index: 1;">
         <a-icon type="left"/>
       </a-button>
-      <a-icon type="github" style="font-size: 30px; margin-right: 10px;" />
+      <a-icon type="github" style="font-size: 30px; margin-right: 10px;"/>
       <span class="approval-name">{{ name }}</span>
     </div>
     <div class="approval-buttons">
@@ -88,7 +89,6 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    z-index: 1;
 
     .approval-icon {
       min-width: 32px;
@@ -124,7 +124,18 @@ export default {
     }
   }
 
+  /deep/ .ant-tabs-bar {
+    border-bottom: none;
+    margin: 0;
+  }
+
+  /deep/ .ant-tabs-nav-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
   /deep/ .ant-tabs-nav-scroll {
+    width: 460px;
     display: flex;
     justify-content: center;
   }
