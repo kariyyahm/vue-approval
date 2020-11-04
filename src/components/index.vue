@@ -3,7 +3,7 @@
   <div class="index">
     <div class="index-background"></div>
     <div class="approval-logo">
-      <a-button shape="circle" style="margin-right: 10px; z-index: 1;">
+      <a-button shape="circle" style="margin-right: 10px; z-index: 1;" @click="onBack">
         <a-icon type="left"/>
       </a-button>
       <a-icon type="github" style="font-size: 30px; margin-right: 10px;"/>
@@ -14,7 +14,7 @@
       <a-button shape="round" @click="onPreview">预览</a-button>
       <a-button type="primary" shape="round" @click="onSubmit">发布</a-button>
     </div>
-    <a-tabs default-active-key="Base" :animated="false">
+    <a-tabs default-active-key="Settings" :animated="false">
       <a-tab-pane key="Base" tab="基础设置">
         <Base @changeName="getName"/>
       </a-tab-pane>
@@ -66,6 +66,9 @@ export default {
       this.$message.info('请在控制台查看输出')
       console.log('====================')
       console.log(`发布数据：${this.res}`)
+    },
+    onBack() {
+      this.$message.info('此路不通')
     }
   },
   watch: {},

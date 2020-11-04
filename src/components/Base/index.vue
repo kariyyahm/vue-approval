@@ -3,7 +3,7 @@
   <div class="base">
     <a-form-model class="base-form" :model="form">
       <div style="display: flex;">
-        <a-icon type="github" style="font-size: 48px; margin: 10px 16px 0 0;" />
+        <a-icon type="github" style="font-size: 48px; margin: 10px 16px 0 0;"/>
         <a-form-model-item prop="fakeName" style="min-width: 546px;" required>
           <span slot="label">
             <span>表单名称</span>
@@ -25,8 +25,8 @@
           <span>表单说明</span>
           <span class="form-label-msg">最多100字</span>
         </span>
-        <a-textarea v-model="form.formDescription" :maxLength="100" placeholder="请输入" :rows="3"
-                    style="margin-top: 4px;"/>
+        <a-textarea v-model="form.formDescription" :maxLength="100" placeholder="请输入"
+                    :auto-size="{ minRows: 3, maxRows: 5 }" style="margin-top: 4px;"/>
       </a-form-model-item>
       <a-form-model-item label="谁可以发起提交" prop="whoSubmitData">
         <a-select v-model="form.whoSubmitData">
@@ -105,8 +105,8 @@ export default {
 .base {
   background-color: rgb(238, 241, 243);
   width: 100vw;
-  min-height: 100vh;
-  padding: 10px 0 30px;
+  min-height: calc(~"100vh - 45px");
+  padding: 10px 0;
 
   .base-form {
     width: 660px;
