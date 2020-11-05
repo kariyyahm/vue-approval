@@ -104,6 +104,8 @@ export default {
     .approval-name {
       width: 240px;
       font-size: 16px;
+      font-weight: bold;
+      color: #111f2c;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 1;
