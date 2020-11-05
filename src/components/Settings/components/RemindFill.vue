@@ -5,7 +5,7 @@
       <template v-slot:main>提醒填写</template>
       <template v-slot:subtitle>通过设置推送提醒指定成员填写表单</template>
     </SettingsHeader>
-    <RemindFillNote v-for="(item, index) in remindFillNotes" :form="item" :index="index + 1" @deleteNote="deleteNote"
+    <RemindFillNote v-for="(item, index) in remindFillNotes" :key="index" :form="item" :index="index + 1" @deleteNote="deleteNote"
                     @changeNote="changeNote"/>
     <a-button class="remind-fill-add" @click="addNotes">+ 新增提醒</a-button>
   </div>
