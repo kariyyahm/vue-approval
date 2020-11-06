@@ -1,13 +1,23 @@
 <!-- 流程设置 -->
 <template>
   <div class="process">
-    我是流程设置
+    <SponsorNode/>
+    <div class="process-over">
+      流程结束
+    </div>
+    <NodeSettings ref="NodeSettings"/>
   </div>
 </template>
 
 <script>
+import SponsorNode from './node/SponsorNode'
+import NodeSettings from './settings/NodeSettings'
+
 export default {
-  components: {},
+  components: {
+    SponsorNode,
+    NodeSettings
+  },
   props: {},
   data() {
     return {}
@@ -22,6 +32,13 @@ export default {
 
 <style lang="less" scoped>
 .process {
-  //width: 100vw;
+  background-color: rgb(238, 241, 243);
+  width: 100vw;
+  min-height: calc(~"100vh - 45px");
+  padding: 10px 0;
+
+  .process-over {
+
+  }
 }
 </style>
