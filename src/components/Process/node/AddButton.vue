@@ -1,6 +1,8 @@
 <!-- 加号按钮 -->
 <template>
-  <div></div>
+  <div class="add-button">
+
+  </div>
 </template>
 
 <script>
