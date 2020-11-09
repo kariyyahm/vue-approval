@@ -1,11 +1,18 @@
 <!-- 发起人节点 -->
 <template>
-  <div></div>
+  <div class="sponsor-node">
+    <AddButton/>
+  </div>
 </template>
 
 <script>
+import AddButton from "./AddButton";
+
 export default {
-  components: {},
+  mixin: [],
+  components: {
+    AddButton
+  },
   props: {},
   data() {
     return {}
@@ -17,6 +24,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
+.sponsor-node {
 
+}
 </style>

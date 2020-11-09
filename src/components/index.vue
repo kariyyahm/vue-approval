@@ -14,7 +14,7 @@
       <a-button shape="round" @click="onPreview">预览</a-button>
       <a-button type="primary" shape="round" @click="onSubmit">发布</a-button>
     </div>
-    <a-tabs default-active-key="Settings" :animated="false">
+    <a-tabs default-active-key="Process" :animated="false">
       <a-tab-pane key="Base" tab="基础设置">
         <Base @changeName="getName"/>
       </a-tab-pane>
