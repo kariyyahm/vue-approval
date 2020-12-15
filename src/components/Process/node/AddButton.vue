@@ -4,7 +4,8 @@
     <div class="add-content">
       <a-popover v-model="visible" trigger="click">
         <div slot="content" class="add-button-content global-center" style="flex-wrap: wrap;">
-          <div class="icon-item global-start-center" v-for="item in nodeType" :key="item.value">
+          <div class="icon-item global-start-center" v-for="item in nodeTypes" :key="item.value"
+               @click="addNode(item.value)">
             <div class="icon-wrap global-center">
               <svg class="icon" aria-hidden="true">
                 <use :xlink:href="`#icon-${item.value}`"></use>
@@ -15,26 +16,39 @@
           </span>
           </div>
         </div>
-        <a-button icon="plus" shape="circle" type="primary" class="add-btn" />
+        <a-button icon="plus" shape="circle" type="primary" class="add-btn"/>
       </a-popover>
     </div>
   </div>
 </template>
 
 <script>
-import {nodeType} from '@/common/enum'
+import {nodeTypes} from '@/common/enum'
 
 export default {
   components: {},
-  props: {},
+  props: {
+    currentNode: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
-      nodeType,
+      nodeTypes,
       visible: false
     }
   },
   computed: {},
-  methods: {},
+  methods: {
+    addNode(type) {
+      this.$store.dispatch('addNode', {
+        node: this.currentNode,
+        type
+      })
+      this.visible = false
+    },
+  },
   watch: {},
   created() {
   }

@@ -1,17 +1,57 @@
 <!-- BaseNode.vue -->
 <script>
+import AddButton from "./AddButton";
+import NameInput from "./NameInput";
+import { nodeType } from '@/common/node'
 export default {
-  components: {},
-  props: {},
+  components: {
+    AddButton,
+    NameInput
+  },
+  props: {
+    currentNode: {
+      type: Object,
+      required: true
+    },
+    parentNode: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {}
   },
   computed: {},
   methods: {
     delNode() {
+      this.$store.dispatch('delNode', {
+        node: this.parentNode,
+        childNode: this.currentNode
+      })
     },
     editNode() {
+      this.$emit('editNode', {
+        node: this.parentNode,
+        childNode: this.currentNode
+      })
+    },
+    getNodeComponent(node) {
+      switch (node.type) {
+        case nodeType.approver:
+          return 'ApproverNode'
+        case nodeType.copyer:
+          return 'CopyerNode'
+        case nodeType.handler:
+          return 'HandlerNode'
+        case nodeType.router:
+          return 'RouterNode'
+        case nodeType.route:
+          return 'RouteNode'
+        default:
+          return ''
+      }
     }
+
   },
   watch: {},
   created() {

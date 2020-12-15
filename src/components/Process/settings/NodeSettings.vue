@@ -11,7 +11,11 @@ export default {
     return {}
   },
   computed: {},
-  methods: {},
+  methods: {
+    openSettings() {
+
+    }
+  },
   watch: {},
   created() {}
 }

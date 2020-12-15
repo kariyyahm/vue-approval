@@ -39,7 +39,7 @@ export class HandlerNode {
   constructor() {
     this.id = uuid()
     this.type = 'handler'
-    this.name = '抄送人'
+    this.name = '办理人'
     this.childNode = null
   }
 }

@@ -2,7 +2,8 @@
 <template>
   <div class="process">
     <div class="process-tree">
-      <SponsorNode/>
+      <SponsorNode v-if="processData" :currentNode="processData.childNode" :parentNode="processData"
+                   @editNode="editNode"/>
       <div class="process-over">
         流程结束
       </div>
@@ -12,8 +13,20 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import SponsorNode from './node/SponsorNode'
+import ApproverNode from './node/ApproverNode'
+import CopyerNode from './node/CopyerNode'
+import HandlerNode from './node/HandlerNode'
+import RouteNode from './node/RouteNode'
+import RouterNode from './node/RouterNode'
 import NodeSettings from './settings/NodeSettings'
+
+Vue.component('ApproverNode', ApproverNode)
+Vue.component('CopyerNode', CopyerNode)
+Vue.component('HandlerNode', HandlerNode)
+Vue.component('RouteNode', RouteNode)
+Vue.component('RouterNode', RouterNode)
 
 export default {
   components: {
@@ -24,8 +37,19 @@ export default {
   data() {
     return {}
   },
-  computed: {},
-  methods: {},
+  computed: {
+    processData() {
+      return this.$store.state.processData
+    }
+  },
+  methods: {
+    editNode({node, childNode}) {
+      this.$refs.NodeSettings.openSettings({
+        activeNode: childNode,
+        activeParentNode: node
+      })
+    }
+  },
   watch: {},
   created() {
   }
@@ -41,7 +65,7 @@ export default {
   min-height: calc(~"100vh - 45px");
   padding: 10px 0;
   text-align: center;
-
+  overflow-x: auto;
 
   .process-tree {
     margin: 60px;

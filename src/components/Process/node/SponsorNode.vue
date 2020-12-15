@@ -5,36 +5,29 @@
       <div class="node-box">
         <div class="sponsor node-box-title">
           <span style="display: flex; align-items: center;">
-            <span class="title-text"> currentNode.name </span>
+            <span class="title-text">{{ currentNode.name }}</span>
           </span>
-          <a-icon type="close" class="icon-close" @click="delNode"/>
+<!--          <a-icon type="close" class="icon-close" @click="delNode"/>-->
         </div>
         <div class="node-box-content" @click="editNode">
           <p class="node-box-content-persons">summary</p>
         </div>
       </div>
-      <AddButton class="node-addBtn"/>
+      <AddButton :currentNode="currentNode" class="node-addBtn"/>
     </div>
-<!--    <div v-if="currentNode.childNode">-->
-<!--      <component-->
-<!--          :is="getNodeComponent(currentNode.childNode)"-->
-<!--          :currentNode="currentNode.childNode"-->
-<!--          :parentNode="currentNode"-->
-<!--          v-on="$listeners"-->
-<!--      />-->
-<!--    </div>-->
+    <div v-if="currentNode.childNode">
+      <component :is="getNodeComponent(currentNode.childNode)" :currentNode="currentNode.childNode"
+                 :parentNode="currentNode" v-on="$listeners"/>
+    </div>
   </div>
 </template>
 
 <script>
-import AddButton from "./AddButton";
 import BaseNode from "@/components/Process/node/BaseNode";
 
 export default {
   mixins: [BaseNode],
-  components: {
-    AddButton
-  },
+  components: {},
   props: {},
   data() {
     return {}
