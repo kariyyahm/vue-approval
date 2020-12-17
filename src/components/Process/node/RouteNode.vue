@@ -5,7 +5,8 @@
       <div class="node-box">
         <div class="route node-box-title">
           <span class="route-title">
-<!--            <name-input :name="currentNode.name" @change="onChangeName" />-->
+            <span>{{ currentNode.name }}</span>
+            <!--<name-input :name="currentNode.name" @change="onChangeName" />-->
             <span>优先级{{ currentNode.priority }}</span>
           </span>
           <a-icon type="close" class="icon-close" @click="delNode"/>

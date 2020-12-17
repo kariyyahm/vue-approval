@@ -33,7 +33,6 @@ export default new Vuex.Store({
         node.routes.splice(index, 1)
       } else if (childNode.type === nodeType.router) {
         // 条件分支中的条件数量为1时触发，删除条件分支，将最后一条支线合并到主流
-        console.log('我进来了')
         const router = childNode
         const lastRoute = router.routes[0]
         if (lastRoute.childNode) {
