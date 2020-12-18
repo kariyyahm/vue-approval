@@ -62,7 +62,7 @@ export default {
 .process {
   background-color: rgb(238, 241, 243);
   width: 100vw;
-  min-height: calc(~"100vh - 45px");
+  height: calc(~"100vh - 45px");
   padding: 10px 0;
   text-align: center;
   overflow-x: auto;
