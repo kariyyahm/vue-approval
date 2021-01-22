@@ -6,7 +6,7 @@
       <a-button shape="circle" style="margin-right: 10px; z-index: 1;" @click="onBack">
         <a-icon type="left"/>
       </a-button>
-      <a-icon type="github" style="font-size: 30px; margin-right: 10px;"/>
+      <a-icon type="github" style="font-size: 30px; margin-right: 10px;" @click="goGithub"/>
       <span class="approval-name">{{ name }}</span>
     </div>
     <div class="approval-buttons">
@@ -57,23 +57,26 @@ export default {
       this.name = val
     },
     onDelete() {
-
+      this.$message.info('此路不通')
     },
     onPreview() {
-
+      this.$message.info('尽请期待')
     },
     onSubmit() {
       this.$message.info('请在控制台查看输出')
       console.log('====================')
       console.log(`发布数据：${this.res}`)
+      console.log('====================')
     },
     onBack() {
       this.$message.info('此路不通')
+    },
+    goGithub() {
+      window.location.href= "https://github.com/kariyyahm/vue-approval"
     }
   },
   watch: {},
-  created() {
-  }
+  created() {}
 }
 </script>
 
@@ -92,6 +95,7 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 1;
 
     .approval-icon {
       min-width: 32px;

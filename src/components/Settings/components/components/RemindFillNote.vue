@@ -40,22 +40,8 @@
 </template>
 
 <script>
-const PERSONS = [
-  {id: '001', name: '赵大'},
-  {id: '002', name: '陈二'},
-  {id: '003', name: '张三'},
-  {id: '004', name: '李四'},
-  {id: '005', name: '王五'},
-]
-const WEEKS = [
-  {label: '周日', value: 'sunday'},
-  {label: '周一', value: 'monday'},
-  {label: '周二', value: 'tuesday'},
-  {label: '周三', value: 'wednesday'},
-  {label: '周四', value: 'thursday'},
-  {label: '周五', value: 'friday'},
-  {label: '周六', value: 'saturday'},
-]
+import { PERSONS, WEEKS }from '@/common/enum'
+
 const TIMES = () => {
   let times = []
   for (let i = 0; i < 288; i++) {

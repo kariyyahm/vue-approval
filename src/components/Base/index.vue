@@ -54,23 +54,8 @@
 </template>
 
 <script>
-const FORM_TYPES = [
-  {label: '假勤管理', value: 'attendance'},
-  {label: '人事管理', value: 'personnel'},
-  {label: '财务管理', value: 'finance'},
-  {label: '业务管理', value: 'business'},
-  {label: '行政管理', value: 'administrative'},
-  {label: '法务管理', value: 'legal'},
-  {label: '安全复工', value: 'safe'},
-  {label: '其他', value: 'other'}
-]
-const PERSONS = [
-  {id: '001', name: '赵大'},
-  {id: '002', name: '陈二'},
-  {id: '003', name: '张三'},
-  {id: '004', name: '李四'},
-  {id: '005', name: '王五'},
-]
+import { PERSONS, FORM_TYPES } from "@/common/enum";
+
 export default {
   components: {},
   props: {},
