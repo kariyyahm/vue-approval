@@ -1,6 +1,6 @@
-<!-- 选择列表 -->
+<!-- 关联表单 -->
 <template>
-  <div></div>
+  <div>关联表单</div>
 </template>
 
 <script>
@@ -17,6 +17,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
 </style>

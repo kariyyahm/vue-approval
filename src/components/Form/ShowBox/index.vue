@@ -1,8 +1,9 @@
-<!-- 控件设置栏 -->
+<!-- 控件展示栏 中间 -->
 <template>
-  <div class="settings-box">
-    <div class="settings-box-title">
-
+  <div class="show-box">
+    <div class="show-box-title">
+      <div>撤销 恢复</div>
+      <div>tab</div>
     </div>
   </div>
 </template>
@@ -17,16 +18,17 @@ export default {
   computed: {},
   methods: {},
   watch: {},
-  created() {
-  }
+  created() {}
 }
 </script>
 
 <style lang="less" scoped>
-.settings-box {
+.show-box {
+  border-left: 1px solid #ebecee;
+  border-right: 1px solid #ebecee;
   height: 100%;
 
-  .settings-box-title {
+  .show-box-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,5 +38,6 @@ export default {
     background: #fafafb;
     border-bottom: 1px solid #ebecee;
   }
+
 }
 </style>

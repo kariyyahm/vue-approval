@@ -60,7 +60,7 @@ export default {
       this.$message.info('此路不通')
     },
     onPreview() {
-      this.$message.info('尽请期待')
+      this.$message.info('敬请期待')
     },
     onSubmit() {
       this.$message.info('请在控制台查看输出')

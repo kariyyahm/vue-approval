@@ -1,8 +1,8 @@
-<!-- 控件选择栏 -->
+<!-- 控件选择栏 左侧 -->
 <template>
   <div class="select-box">
     <div class="select-radio-group">
-      <a-radio-group default-value="control">
+      <a-radio-group v-model="activeValue" default-value="control">
         <a-radio-button value="control">
           控件库
         </a-radio-button>
@@ -16,17 +16,27 @@
     </div>
 
     <div class="select-box-list">
-
+      <component :is="activeValue" />
     </div>
   </div>
 </template>
 
 <script>
+import control from "@/components/Form/SelectBox/ControlList";
+import suit from "@/components/Form/SelectBox/SuitList";
+import relation from "@/components/Form/SelectBox/FormList";
+
 export default {
-  components: {},
+  components: {
+    control,
+    suit,
+    relation
+  },
   props: {},
   data() {
-    return {}
+    return {
+      activeValue: 'control'
+    }
   },
   computed: {},
   methods: {},
@@ -61,6 +71,11 @@ export default {
         border-top-right-radius: 16px;
       }
     }
+  }
+
+  .select-box-list {
+    height: calc(~"100vh - 85px");
+    overflow-y: auto;
   }
 
 }
