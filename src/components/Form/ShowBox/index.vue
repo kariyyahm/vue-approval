@@ -3,7 +3,7 @@
   <div class="show-box">
     <div class="show-box-title">
       <div>撤销 恢复</div>
-      <div>tab</div>
+      <div>PC端 ｜ 移动端</div>
     </div>
   </div>
 </template>
