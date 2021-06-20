@@ -5,12 +5,20 @@
       <div>撤销 恢复</div>
       <div>PC端 ｜ 移动端</div>
     </div>
+    <div class="show-box-content">
+      <draggable>
+        <BoxItemWrap></BoxItemWrap>
+      </draggable>
+    </div>
   </div>
 </template>
 
 <script>
+import BoxItemWrap from "@/components/Form/ShowBox/BoxItemWrap";
 export default {
-  components: {},
+  components: {
+    BoxItemWrap
+  },
   props: {},
   data() {
     return {}

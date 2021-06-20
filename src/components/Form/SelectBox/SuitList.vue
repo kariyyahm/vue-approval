@@ -3,16 +3,16 @@
   <div class="suit-list">
     <div class="list-main">
       <div class="list-title">出勤套件</div>
-      <div class="list-content">
+      <draggable class="list-content">
         <ListItem v-for="item in ATTENDANCE_SUITES" :val="item" :key="item.type"></ListItem>
-      </div>
+      </draggable>
     </div>
 
     <div class="list-main">
       <div class="list-title">人事套件</div>
-      <div class="list-content">
+      <draggable class="list-content">
         <ListItem v-for="item in HR_SUITES" :val="item" :key="item.type"></ListItem>
-      </div>
+      </draggable>
     </div>
   </div>
 </template>

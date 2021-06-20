@@ -3,16 +3,16 @@
   <div class="control-list">
     <div class="list-main">
       <div class="list-title">基础控件</div>
-      <div class="list-content">
+      <draggable class="list-content">
         <ListItem v-for="item in BASIC_CONTROLS" :val="item" :key="item.type"></ListItem>
-      </div>
+      </draggable>
     </div>
 
     <div class="list-main">
       <div class="list-title">增强控件</div>
-      <div class="list-content">
+      <draggable class="list-content">
         <ListItem v-for="item in ENHANCED_CONTROLS" :val="item" :key="item.type"></ListItem>
-      </div>
+      </draggable>
     </div>
   </div>
 </template>
